@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "personals",
+  "info": {
+    "singularName": "personal",
+    "pluralName": "personals",
+    "displayName": "personal"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "Apellidos": {
+      "type": "string"
+    },
+    "Telefono": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    "ruta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ruta.ruta",
+      "inversedBy": "personal"
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "personal"
+    },
+    "servicio": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::servicio.servicio",
+      "inversedBy": "personals"
+    }
+  }
+}
