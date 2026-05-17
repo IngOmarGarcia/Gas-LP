@@ -1,9 +1,6 @@
-### `develop`
-
+### `develop` Node Js Ionic 
+npm install
 npm run develop
-# or
-yarn develop
-```
 
 # 🛢️ Sistema de Gestión para Distribuidora de Gas LP
 
